@@ -88,7 +88,7 @@
           href="#history"
           data-text-close="Cacher l'historique des actions ˄"
           data-text-open="Afficher l'historique des actions ⌄"
-          data-versions-url=admin_organisation_rdv_versions_path(@rdv.organisation, @rdv, only: ["user_ids", "agent_ids", "duration_in_min", "status", "starts_at", "lieu_id", "notes", "location", "context"])
+          data-versions-url=admin_organisation_rdv_versions_path(@rdv.organisation, @rdv, only: ["user_ids", "agent_ids", "duration_in_min", "status", "starts_at", "lieu_id", "notes", "location", "context", "notify_create_by_sms", "notify_reminder_by_sms", "notify_create_by_email", "notify_reminder_by_email"])
         ]
           | Afficher l'historique des actions ⌄
       .js-record-versions-body#history.collapse class=(@uncollapsed_section == "history" ? "show" : "")
