@@ -7,7 +7,7 @@ module Admin::RdvWizardFormConcern
     include ActiveModel::Model
     include Rails.application.routes.url_helpers
 
-    attr_accessor :rdv, :service_id
+    attr_accessor :rdv, :service_id, :notify_creation_by_email, :notify_reminder_by_email, :notify_creation_by_sms, :notify_reminder_by_sms
     attr_reader :agent_author
 
     # delegates all getters and setters to rdv

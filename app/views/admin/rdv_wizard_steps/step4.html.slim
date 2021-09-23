@@ -30,15 +30,21 @@ do
             div.d-flex
               div
                 i.fa.fa-comments>
-              div.flex-grow-1.ml-2
+              div.ml-2
                 div= user_presenter.phone_number
                 div Notifications SMS : #{user_presenter.notify_by_sms}
+                div.mt-1
+                  = f.input :notify_creation_by_sms, as: :boolean
+                  = f.input :notify_reminder_by_sms, as: :boolean
             div.d-flex
               div
                 i.fa.fa-envelope>
               div.flex-grow-1.ml-2
                 div= user_presenter.email
                 div Notifications Email : #{user_presenter.notify_by_email}
+                div.mt-1
+                  = f.input :notify_creation_by_email, as: :boolean
+                  = f.input :notify_reminder_by_email, as: :boolean
       - else
         p= I18n.t("admin_rdv_wizard_form.step4.no_notifications")
 

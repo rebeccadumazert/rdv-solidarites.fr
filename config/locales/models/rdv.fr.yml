@@ -22,6 +22,10 @@ fr:
         duration_in_min: Durée en minutes
         status: Statut
         context: Contexte
+        notify_creation_by_sms: Notifie la création du RDV par SMS
+        notify_reminder_by_sms: Notifie le rappel par SMS
+        notify_creation_by_email: Notifie la création du RDV par email
+        notify_reminder_by_email: Notifie le rappel par email
         statuses:
           unknown: État indéterminé
           waiting: En salle d’attente

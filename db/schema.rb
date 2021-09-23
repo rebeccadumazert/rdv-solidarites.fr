@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_13_213227) do
+ActiveRecord::Schema.define(version: 2021_09_23_121351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -308,6 +308,10 @@ ActiveRecord::Schema.define(version: 2021_09_13_213227) do
     t.text "context"
     t.bigint "lieu_id"
     t.enum "status", default: "unknown", null: false, enum_name: "rdv_status"
+    t.boolean "notify_creation_by_sms"
+    t.boolean "notify_reminder_by_sms"
+    t.boolean "notify_creation_by_email"
+    t.boolean "notify_reminder_by_email"
     t.index ["created_by"], name: "index_rdvs_on_created_by"
     t.index ["lieu_id"], name: "index_rdvs_on_lieu_id"
     t.index ["motif_id"], name: "index_rdvs_on_motif_id"

@@ -53,9 +53,17 @@
           p.card-text
             i.fa.fa-fw.fa-phone>
             = displayable_user.phone_number_and_notification
+            - if @rdv.notify_reminder_by_sms
+              div Notifier le rappel par SMS
+            - else
+              div Pas de notification de rappel par SMS
           p.card-text
             i.fa.fa-fw.fa-envelope>
             = displayable_user.email_and_notification
+            - if @rdv.notify_reminder_by_email
+              div Notifier le rappel par email
+            - else
+              div Pas de notification de rappel par email
 
           - if displayable_user.notes.present?
             .d-flex title="Remarques"
